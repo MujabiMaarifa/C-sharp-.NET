@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5Z6TFlYNNfk=",
+  "success": true,
+  "projectFilePath": "/home/maarifa/playground/C#/helloWorld/helloWorld.csproj",
+  "expectedPackageFiles": [
+    "/home/maarifa/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.12/microsoft.aspnetcore.app.ref.10.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,22 +1,27 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
-class TwoSumTarget {
-    public static void Main(string[] args) {
-        int[] list = {1, 2, 3, 4, 5, 6};
-        Console.WriteLine(string.Join(", ", twoSum(list, 9)));
+public class TwoSum
+{
+    public static void Main(string[] args)
+    {
+        int[] nums = {3, 2, 4};
+        int target = 6;
+
+        Console.WriteLine(string.Join(", ", twoSum(nums, target)));
     }
-    public static int[] twoSum(int[] arr, int target) {
-        int i=0;
-        int j =arr.Length-1; 
+    public static int[] twoSum(int[] nums, int target)
+    {
+        int n = nums.Length;
+        var map = new Dictionary<int, int>();
 
-        while(i<j) {
-            int t = arr[i]+arr[j];
-            if(t==target) return new int[] {i+1, j+1};
-            if(t<target) i++;
-            if(t>target) j--;
+        for(int i=0; i<n; i++)
+        {
+            int needed = target-nums[i];
+            if(map.TryGetValue(needed, out int j)) return new int[]{j, i};
+            map[nums[i]]=i;
         }
-        return new int[0];
+        return Array.Empty<int>();
     }
-
 }
